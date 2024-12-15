@@ -958,6 +958,6 @@ react/cjs/react-jsx-runtime.development.js:
    *)
 */
 
-Like.$$id = "/Users/ahoodyakov/react-advanced-meetup/react-advanced-meetup/rsc/build/Like.jsdefault";
+Like.$$id = "/Users/ahoodyakov/IdeaProjects/fwdays-modern-frontend-examples/chapter-1/lesson-2/rsc-from-scratch/build/Like.jsdefault";
 Like.$$typeof = Symbol.for("react.client.reference");
 			
