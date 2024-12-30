@@ -1,0 +1,90 @@
+:host {
+  display: block;
+  width: 100%;
+}
+
+.page-container {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  align-items: center;
+  width: calc(100% - 200px);
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 40px;
+}
+
+.watchlist-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.watchlist-item {
+  background-color: #282828;
+  padding: 20px;
+  border-radius: 8px;
+  width: calc(33.333% - 40px);
+  box-sizing: border-box;
+  text-align: left;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.watchlist-item:hover {
+  transform: scale(1.05);
+  background-color: #333;
+}
+
+.watchlist-item img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.watchlist-item-details {
+  margin-top: 10px;
+}
+
+.watchlist-item h3 {
+  margin: 0;
+  color: #ffffff;
+  font-size: 1.2em;
+  margin-bottom: 8px;
+}
+
+.watchlist-item p {
+  color: #b0b0b0;
+  margin: 5px 0;
+  font-size: 0.9em;
+}
+
+.overview {
+  line-height: 1.4;
+}
+
+@media (max-width: 1200px) {
+  .watchlist-item {
+    width: calc(50% - 40px);
+  }
+}
+
+@media (max-width: 768px) {
+  .watchlist-item {
+    width: calc(100% - 40px);
+  }
+
+  .page-container {
+    margin-left: 0;
+    width: 100%;
+  }
+}
