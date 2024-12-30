@@ -1,0 +1,24 @@
+<div class="page-container">
+  <h1>Watchlist</h1>
+  <div class="watchlist-container">
+    @for (movie of watchlist; track movie.id) {
+      <div class="watchlist-item">
+        @if (movie.poster_path) {
+          <img
+            [src]="'https://image.tmdb.org/t/p/w500' + movie.poster_path"
+            [alt]="movie.title"
+          >
+        }
+        <div class="watchlist-item-details">
+          <h3>{{ movie.title }}</h3>
+          @if (movie.release_date) {
+            <p>{{ movie.release_date | date:'yyyy' }}</p>
+          }
+          @if (movie.overview) {
+            <p class="overview">{{ movie.overview | slice:0:100 }}...</p>
+          }
+        </div>
+      </div>
+    }
+  </div>
+</div>
