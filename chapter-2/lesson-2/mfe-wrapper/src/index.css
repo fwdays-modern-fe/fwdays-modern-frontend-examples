@@ -1,0 +1,220 @@
+
+body {
+  background-color: #121212;
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  width: 100%;
+}
+
+.nav-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: #1e1e1e;
+  border-right: 1px solid #333;
+  height: 100%;
+}
+
+.nav-container a {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.nav-container a:hover,
+.nav-container a.active {
+  background-color: #333;
+}
+
+.page-container,
+.movies-container,
+.login-container,
+.index-container {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-left: 200px; /* Adjust based on nav width */
+}
+
+h2, h3 {
+  color: #ffffff;
+}
+
+button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+hr {
+  border-color: #333;
+  margin-top: 20px;
+}
+
+.movie-list {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.movie-item {
+  background-color: #282828;
+  padding: 20px 40px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  width: calc(33.333% - 20px); /* Adjust width for three items per row */
+  box-sizing: border-box;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  text-align: center;
+  cursor: pointer;
+}
+
+.movie-item:hover {
+  transform: scale(1.05);
+  background-color: #333;
+}
+
+.watchlist-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.watchlist-item {
+  background-color: #282828;
+  padding: 20px;
+  border-radius: 8px;
+  width: calc(33.333% - 20px);
+  box-sizing: border-box;
+  text-align: left;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.watchlist-item:hover {
+  transform: scale(1.05);
+  background-color: #333;
+}
+
+.watchlist-item img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+.watchlist-item-details {
+  margin-top: 10px;
+}
+
+.watchlist-item h3 {
+  margin: 0;
+  color: #ffffff;
+}
+
+.watchlist-item p {
+  color: #b0b0b0;
+}
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
