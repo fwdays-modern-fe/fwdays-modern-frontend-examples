@@ -1,5 +1,5 @@
 export const environment = {
   production: false,
-  apiKey: 'API_KEY',
-  accessToken: 'ACCESS_TOKEN',
+  apiKey: 'afd4315a1a8d420131a831799dd6da11',
+  accessToken: 'eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJhZmQ0MzE1YTFhOGQ0MjAxMzFhODMxNzk5ZGQ2ZGExMSIsIm5iZiI6MTcxNjY3NTA1OS44OTkwMDAyLCJzdWIiOiI2NjUyNjFmMzMxOWJiMmQ2Y2RhNmIwYjUiLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.ffYnfhY-xvD60233rJc1T7bwQ2mmYAoQtTpVyZJDwu4',
 };
