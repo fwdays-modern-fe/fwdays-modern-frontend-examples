@@ -2,5 +2,7 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$/../.." vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/mfe-angular-react" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/module-federation-react-angular" vcs="Git" />
   </component>
 </project>

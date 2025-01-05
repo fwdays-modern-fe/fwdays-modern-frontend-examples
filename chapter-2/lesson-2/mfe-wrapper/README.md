@@ -54,7 +54,7 @@ mfe-wrapper/
 │   │   ├── index.tsx      # Main entry route
 │   │   ├── login.tsx      # Login page
 │   │   ├── movies.lazy.tsx # Lazy-loaded movies component
-│   │   └── watchlist.tsx  # Watchlist feature
+│   │   └── watchlist.jsx  # Watchlist feature
 │   ├── index.css          # Global styles
 │   ├── main.tsx          # Application entry point
 │   ├── routeTree.gen.ts  # Generated route tree

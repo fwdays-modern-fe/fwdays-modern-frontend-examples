@@ -199,7 +199,7 @@ export const routeTree = rootRoute
       "filePath": "login.tsx"
     },
     "/watchlist": {
-      "filePath": "watchlist.tsx"
+      "filePath": "watchlist.jsx"
     },
     "/movies": {
       "filePath": "movies.lazy.tsx"
