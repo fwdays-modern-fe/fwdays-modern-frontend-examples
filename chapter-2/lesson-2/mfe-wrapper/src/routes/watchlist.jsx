@@ -17,39 +17,21 @@ export const Route = createFileRoute('/watchlist')({
 })
 
 function RouteComponent() {
-  const angularComponentRef = useRef(null);
   useEffect(() => {
-    import("angularApp/Watchlist")
+    import("angularApp/ProfileComponent")
         .then((module) => {
-          if (angularComponentRef.current) {
-            angularComponentRef.current.removeEventListener(
-                "onReset",
-                (event) => onAngularComponentEvent(event.detail.user),
-                true
-            );
-            angularComponentRef.current.addEventListener(
-                "onReset",
-                (event) => onAngularComponentEvent(event.detail.user),
-                true
-            );
-          }
+         console.log("loaded !")
         })
-        .catch(() =>
+        .catch((e) =>
             console.error(
-                "Error: Couldn't load component from Angular Remote"
+                e
             )
         );
   }, []);
 
-  useEffect(() => {
-    if (angularComponentRef.current) {
-      angularComponentRef.current.user = user;
-    }
-  }, [user]);
-
   return (
       <div className="container">
-        <app-profile-component ref={angularComponentRef}></app-profile-component>
+        <app-profile-component></app-profile-component>
       </div>
   );
 }

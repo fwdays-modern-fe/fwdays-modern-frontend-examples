@@ -13,7 +13,11 @@ export default defineConfig({
             name: "wrapper-app",
             remotes: {
                 movies: "http://localhost:5001/assets/moviesRemoteEntry.js",
-                angularApp: `http://localhost:4200/remoteEntry.js`,
+                angularApp: {
+                    external: `http://localhost:4201/remoteEntry.js`,
+                    externalType: 'url',
+                    format: 'var'
+                },
             },
             shared: ["react", "react-dom", "zustand"],
         }),

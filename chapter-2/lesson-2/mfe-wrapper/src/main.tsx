@@ -6,8 +6,9 @@ import { routeTree } from './routeTree.gen'
 import { NotFoundRoute } from '@tanstack/react-router'
 import { Route as rootRoute } from './routes/__root.tsx'
 import { useAuth } from "./hooks/useAuth.ts";
+import "zone.js";
 
-//Створюємо NotFoundRoute для глобального відображення 404 сторінки для всього застосунку
+//Створюємо NotFoundRoute для глобальноcго відображення 404 сторінки для всього застосунку
 const notFoundRoute = new NotFoundRoute({
     getParentRoute: () => rootRoute,
     component: () => '404 Not Found',
