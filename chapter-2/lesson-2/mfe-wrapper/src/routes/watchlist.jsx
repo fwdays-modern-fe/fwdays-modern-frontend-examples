@@ -1,17 +1,17 @@
 import {createFileRoute, redirect} from '@tanstack/react-router'
-import {useEffect} from "react";
+import {useEffect, useRef} from "react";
 
 export const Route = createFileRoute('/watchlist')({
   beforeLoad: ({ context }) => {
 
-    //використовуємо контекст для перевірки авторизації користувача і доступу до /watchlist сторінки
-    if (!context.auth.isAuthenticated) {
-
-      //Відправляємо користувача на login сторінку за відсутності авторизації
-      throw redirect({
-        to: '/login',
-      })
-    }
+    // //використовуємо контекст для перевірки авторизації користувача і доступу до /watchlist сторінки
+    // if (!context.auth.isAuthenticated) {
+    //
+    //   //Відправляємо користувача на login сторінку за відсутності авторизації
+    //   throw redirect({
+    //     to: '/login',
+    //   })
+    // }
   },
   component: RouteComponent,
 })
@@ -19,7 +19,7 @@ export const Route = createFileRoute('/watchlist')({
 function RouteComponent() {
   const angularComponentRef = useRef(null);
   useEffect(() => {
-    import("angularApp/ProfileComponent")
+    import("angularApp/Watchlist")
         .then((module) => {
           if (angularComponentRef.current) {
             angularComponentRef.current.removeEventListener(

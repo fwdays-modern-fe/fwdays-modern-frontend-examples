@@ -13,6 +13,7 @@ export default defineConfig({
             name: "wrapper-app",
             remotes: {
                 movies: "http://localhost:5001/assets/moviesRemoteEntry.js",
+                angularApp: `http://localhost:4200/remoteEntry.js`,
             },
             shared: ["react", "react-dom", "zustand"],
         }),
@@ -22,5 +23,8 @@ export default defineConfig({
         target: "esnext",
         minify: false,
         cssCodeSplit: false,
+        rollupOptions: {
+            external: ['angularApp/Watchlist']
+        }
     },
 })
