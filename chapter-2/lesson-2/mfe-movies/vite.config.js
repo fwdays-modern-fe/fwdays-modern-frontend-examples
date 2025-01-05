@@ -13,6 +13,7 @@ export default defineConfig({
             exposes: {
                 "./Movies": "./src/App.jsx",
             },
+            shared: ["react", "react-dom", "zustand"],
         }),
     ],
     build: {

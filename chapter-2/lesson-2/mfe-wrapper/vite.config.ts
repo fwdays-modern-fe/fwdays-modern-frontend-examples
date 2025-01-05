@@ -14,6 +14,7 @@ export default defineConfig({
             remotes: {
                 movies: "http://localhost:5001/assets/moviesRemoteEntry.js",
             },
+            shared: ["react", "react-dom", "zustand"],
         }),
     ],
     build: {
