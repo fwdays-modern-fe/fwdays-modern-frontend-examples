@@ -1,0 +1,17 @@
+<div class="page-container">
+  <h1>Watchlist</h1>
+  <div class="watchlist-container">
+    <div class="watchlist-item" *ngFor="let movie of watchlist; trackBy: trackByMovieId">
+      <img
+        *ngIf="movie.poster_path"
+        [src]="'https://image.tmdb.org/t/p/w500' + movie.poster_path"
+        [alt]="movie.title"
+      >
+      <div class="watchlist-item-details">
+        <h3>{{ movie.title }}</h3>
+        <p *ngIf="movie.release_date">{{ movie.release_date | date:'yyyy' }}</p>
+        <p class="overview" *ngIf="movie.overview">{{ movie.overview | slice:0:100 }}...</p>
+      </div>
+    </div>
+  </div>
+</div>
