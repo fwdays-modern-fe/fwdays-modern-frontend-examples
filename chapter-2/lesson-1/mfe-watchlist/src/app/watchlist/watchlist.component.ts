@@ -8,7 +8,7 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './watchlist.component.html',
-  styleUrl: './watchlist.component.scss',
+  styleUrls: ['./watchlist.component.scss'],
   providers: [WatchlistService]
 })
 export class WatchlistComponent implements OnInit {
@@ -24,5 +24,9 @@ export class WatchlistComponent implements OnInit {
         console.error('Error fetching watchlist:', error);
       }
     });
+  }
+
+  trackByMovieId(index: number, movie: Movie): number {
+    return movie.id;
   }
 }
