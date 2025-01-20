@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&display=swap');
+
+.red {
+    background-color: #ff3860;
+}
+
+.dragging {
+    opacity: 0.5;
+}
+.drop-target {
+    border: 2px dashed #48c774 !important;
+}
+.account-card, .expense-card {
+    cursor: move;
+    transition: transform 0.2s;
+    min-width: 200px;
+}
+.account-card:hover, .expense-card:hover {
+    transform: translateY(-2px);
+}
+.icon-wrapper {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+}
+.transaction-list {
+    max-height: 300px;
+    overflow-y: auto;
+}
+.transaction-actions {
+    display: flex;
+    gap: 0.5rem;
+    margin-left: 1rem;
+}
+.transaction-amount {
+    cursor: pointer;
+}
+.edit-amount-input {
+    width: 100px;
+    margin-right: 0.5rem;
+}
+
+.section {
+    padding: 1.5rem;
+}
+
+/* Centering and layout fixes */
+.section-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.title.is-4 {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.block {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.columns {
+    width: 100%;
+    justify-content: center;
+}
+
+.card-content {
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.title.is-5, .subtitle.is-4 {
+    white-space: nowrap;
+    text-align: center;
+}
+
+/* Transaction styling */
+.notification {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.level.is-mobile {
+    width: 100%;
+    justify-content: space-between;
+    padding: 0 1rem;
+}
+
+@media (max-width: 768px) {
+    .account-card, .expense-card {
+        min-height: 150px;
+    }
+    .card-content {
+        padding: 1rem !important;
+    }
+    .title.is-5 {
+        font-size: 1rem;
+    }
+    .subtitle.is-4 {
+        font-size: 1.1rem;
+    }
+
+    .is-mobile {
+        flex-direction: column;
+    }
+}
