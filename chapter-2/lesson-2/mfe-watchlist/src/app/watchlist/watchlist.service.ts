@@ -9,7 +9,6 @@ export class WatchlistService {
   #http = inject(HttpClient);
 
   getWatchlist(): Observable<WatchlistResponse> {
-    console.log('here');
     const headers = new HttpHeaders({
       'accept': 'application/json',
       'Authorization': `Bearer ${environment.accessToken}`

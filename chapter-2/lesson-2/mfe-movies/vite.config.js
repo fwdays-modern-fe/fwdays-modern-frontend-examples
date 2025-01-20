@@ -1,20 +1,20 @@
-import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react";
+import {defineConfig} from 'vite'
+import react from '@vitejs/plugin-react'
 
 import federation from "@originjs/vite-plugin-federation";
 
-// https://vitejs.dev/config/
+// https://vite.dev/config/
 export default defineConfig({
     plugins: [
         react(),
         federation({
-            name: "movies",
-            filename: "moviesRemoteEntry.js",
+            name: 'movies',
+            filename: 'moviesRemoteEntry.js',
             exposes: {
-                "./Movies": "./src/App.jsx",
+                './Movies': './src/App.jsx'
             },
-            shared: ["react", "react-dom", "zustand"],
-        }),
+            shared: ['react', 'react-dom', 'zustand']
+        })
     ],
     build: {
         modulePreload: false,
@@ -22,4 +22,4 @@ export default defineConfig({
         minify: false,
         cssCodeSplit: false,
     },
-});
+})

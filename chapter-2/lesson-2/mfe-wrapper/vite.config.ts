@@ -10,16 +10,16 @@ export default defineConfig({
         react(),
         TanStackRouterVite(),
         federation({
-            name: "wrapper-app",
+            name: 'wrapper-app',
             remotes: {
                 movies: "http://localhost:5001/assets/moviesRemoteEntry.js",
                 angularApp: {
-                    external: `http://localhost:4201/remoteEntry.js`,
+                    external: 'http://localhost:4201/remoteEntry.js',
                     externalType: 'url',
-                    format: 'var'
-                },
+                    format: 'var',
+                }
             },
-            shared: ["react", "react-dom", "zustand"],
+            shared: ['react', 'react-dom', 'zustand']
         }),
     ],
     build: {
