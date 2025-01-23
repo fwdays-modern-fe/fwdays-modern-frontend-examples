@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.4/css/bulma.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/profile.css">
+    <!-- Додамо маніфест -->
+    <link rel="manifest" href="../manifest.json">
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar is-light" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <div class="navbar-item">
+                <span class="icon-text">
+                    <span class="icon">
+                        <i class="fas fa-wallet"></i>
+                    </span>
+                    <span class="has-text-weight-bold">ExpenseTracker</span>
+                </span>
+            </div>
+
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasic">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+
+        <div id="navbarBasic" class="navbar-menu">
+            <div class="navbar-start">
+                <a class="navbar-item" href="../index.html">
+                    <span class="icon-text">
+                        <span class="icon">
+                            <i class="fas fa-home"></i>
+                        </span>
+                        <span>Dashboard</span>
+                    </span>
+                </a>
+                <a class="navbar-item" href="analytics.html">
+                    <span class="icon-text">
+                        <span class="icon">
+                            <i class="fas fa-chart-pie"></i>
+                        </span>
+                        <span>Analytics</span>
+                    </span>
+                </a>
+            </div>
+
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <a class="navbar-item is-active">
+                        <span class="icon-text">
+                            <span class="icon">
+                                <i class="fas fa-user-circle"></i>
+                            </span>
+                            <span>Profile</span>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <section class="section">
+        <div class="container section-container">
+            <!-- Profile Header -->
+            <div class="profile-header">
+                <div class="avatar-wrapper">
+                    <img src="https://www.claudeusercontent.com/api/placeholder/128/128" alt="Profile Picture" class="avatar">
+                    <button class="button is-small edit-avatar">
+                        <span class="icon">
+                            <i class="fas fa-camera"></i>
+                        </span>
+                    </button>
+                </div>
+                <h1 class="title is-3">John Doe</h1>
+                <p class="subtitle is-5">Premium Member</p>
+            </div>
+
+            <!-- Profile Settings -->
+            <div class="settings-card">
+                <div class="card">
+                    <header class="card-header">
+                        <p class="card-header-title">
+                            Personal Information
+                        </p>
+                    </header>
+                    <div class="card-content">
+                        <form id="profileForm">
+                            <div class="field">
+                                <label class="label">Full Name</label>
+                                <div class="control">
+                                    <input class="input" type="text" value="John Doe">
+                                </div>
+                            </div>
+
+                            <div class="field">
+                                <label class="label">Email</label>
+                                <div class="control">
+                                    <input class="input" type="email" value="john.doe@example.com">
+                                </div>
+                            </div>
+
+                            <div class="field">
+                                <label class="label">Phone Number</label>
+                                <div class="control">
+                                    <input class="input" type="tel" value="+1 (555) 123-4567">
+                                </div>
+                            </div>
+
+                            <div class="field">
+                                <label class="label">Currency</label>
+                                <div class="control">
+                                    <div class="select is-fullwidth">
+                                        <select>
+                                            <option selected>USD ($)</option>
+                                            <option>EUR (€)</option>
+                                            <option>GBP (£)</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Notification Settings -->
+                <div class="card mt-4">
+                    <header class="card-header">
+                        <p class="card-header-title">
+                            Notification Settings
+                        </p>
+                    </header>
+                    <div class="card-content">
+                        <div class="field">
+                            <label class="checkbox">
+                                <input type="checkbox" checked>
+                                Email notifications for large transactions
+                            </label>
+                        </div>
+
+                        <div class="field">
+                            <label class="checkbox">
+                                <input type="checkbox" checked>
+                                Monthly spending report
+                            </label>
+                        </div>
+
+                        <div class="field">
+                            <label class="checkbox">
+                                <input type="checkbox">
+                                Budget alerts
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Security Settings -->
+                <div class="card mt-4">
+                    <header class="card-header">
+                        <p class="card-header-title">
+                            Security
+                        </p>
+                    </header>
+                    <div class="card-content">
+                        <div class="field">
+                            <div class="control">
+                                <button class="button is-info security-button">
+                                    Change Password
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Save Button -->
+                <div class="field mt-5">
+                    <div class="control">
+                        <button class="button is-primary is-fullwidth">
+                            Save Changes
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="../js/profile.js"></script>
+</body>
+
+</html>

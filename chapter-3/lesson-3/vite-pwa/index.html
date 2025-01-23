@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.4/css/bulma.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Додамо маніфест -->
+    <link rel="manifest" href="manifest.json">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar is-light" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <div class="navbar-item">
+                <span class="icon-text">
+                    <span class="icon">
+                        <i class="fas fa-wallet"></i>
+                    </span>
+                    <span class="has-text-weight-bold">ExpenseTracker</span>
+                </span>
+            </div>
+
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasic">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+
+        <div id="navbarBasic" class="navbar-menu">
+            <div class="navbar-start">
+                <a class="navbar-item is-active">
+                    <span class="icon-text">
+                        <span class="icon">
+                            <i class="fas fa-home"></i>
+                        </span>
+                        <span>Dashboard</span>
+                    </span>
+                </a>
+                <a class="navbar-item" href="pages/analytics.html">
+                    <span class="icon-text">
+                        <span class="icon">
+                            <i class="fas fa-chart-pie"></i>
+                        </span>
+                        <span>Analytics</span>
+                    </span>
+                </a>
+            </div>
+
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <a class="navbar-item" href="pages/profile.html">
+                        <span class="icon-text">
+                            <span class="icon">
+                                <i class="fas fa-user-circle"></i>
+                            </span>
+                            <span>Profile</span>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <section class="section">
+        <div class="container section-container">
+            <!-- Summary Tiles -->
+            <div class="columns is-mobile is-multiline is-centered">
+                <div class="column is-half-tablet is-one-third-desktop">
+                    <div class="box has-text-centered">
+                        <p class="heading">Total Balance</p>
+                        <p class="title" id="totalBalance">$13,747</p>
+                    </div>
+                </div>
+                <div class="column is-half-tablet is-one-third-desktop">
+                    <div class="box has-text-centered">
+                        <p class="heading">Total Expenses</p>
+                        <p class="title" id="totalExpenses">$0</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bank Accounts Section -->
+            <div class="block mt-2 section-container">
+                <h3 class="title is-4">Bank Accounts</h3>
+                <div class="columns is-multiline is-centered">
+                    <div class="column is-one-third-tablet is-one-quarter-desktop">
+                        <div class="card account-card" draggable="true" data-balance="2000">
+                            <div class="card-content has-text-centered">
+                                <div class="icon-wrapper has-background-info">
+                                    <span class="icon is-large has-text-white">
+                                        <i class="fas fa-2x fa-briefcase"></i>
+                                    </span>
+                                </div>
+                                <p class="title is-5">Salary Account</p>
+                                <p class="subtitle is-4">$2,000</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column is-one-third-tablet is-one-quarter-desktop">
+                        <div class="card account-card" draggable="true" data-balance="5000">
+                            <div class="card-content has-text-centered">
+                                <div class="icon-wrapper has-background-link">
+                                    <span class="icon is-large has-text-white">
+                                        <i class="fas fa-2x fa-university"></i>
+                                    </span>
+                                </div>
+                                <p class="title is-5">Savings Account</p>
+                                <p class="subtitle is-4">$5,000</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Expense Categories Section -->
+            <div class="block mt-2 section-container">
+                <h3 class="title is-4">Expense Categories</h3>
+                <div class="columns is-multiline is-centered">
+                    <div class="column is-one-third-tablet is-one-quarter-desktop">
+                        <div class="card expense-card" data-category="groceries">
+                            <div class="card-content has-text-centered">
+                                <div class="icon-wrapper has-background-success">
+                                    <span class="icon is-large has-text-white">
+                                        <i class="fas fa-2x fa-shopping-cart"></i>
+                                    </span>
+                                </div>
+                                <p class="title is-5">Groceries</p>
+                                <p class="subtitle is-4">$0</p>
+                                <p class="is-size-7">Budget: $1,000</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column is-one-third-tablet is-one-quarter-desktop">
+                        <div class="card expense-card" data-category="utilities">
+                            <div class="card-content has-text-centered">
+                                <div class="icon-wrapper has-background-warning">
+                                    <span class="icon is-large has-text-white">
+                                        <i class="fas fa-2x fa-bolt"></i>
+                                    </span>
+                                </div>
+                                <p class="title is-5">Utilities</p>
+                                <p class="subtitle is-4">$0</p>
+                                <p class="is-size-7">Budget: $300</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Transaction History -->
+            <div class="block mt-2" style="width: 100%; max-width: 800px;">
+                <div class="card">
+                    <header class="card-header">
+                        <p class="card-header-title is-centered">Recent Transactions</p>
+                    </header>
+                    <div class="card-content">
+                        <div id="transactionList" class="transaction-list">
+                            <!-- Transactions will be added here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div class="modal" id="expenseModal">
+        <div class="modal-background"></div>
+        <div class="modal-card">
+            <header class="modal-card-head">
+                <p class="modal-card-title">Enter Expense Amount</p>
+                <button class="delete" aria-label="close" onclick="closeModal()"></button>
+            </header>
+            <section class="modal-card-body">
+                <div class="field">
+                    <label class="label">Amount</label>
+                    <div class="control">
+                        <input class="input" type="number" id="expenseAmount" placeholder="Enter amount">
+                    </div>
+                </div>
+            </section>
+            <footer class="modal-card-foot">
+                <button class="button is-success" onclick="confirmExpense()">Confirm</button>
+                <button class="button" onclick="closeModal()">Cancel</button>
+            </footer>
+        </div>
+    </div>
+
+    <script type="module" src="public/js/index.js"></script>
+    <!-- Скрипт для реєстрації SW -->
+    <script type="module" src="public/js/app.js"></script>
+</body>
+
+</html>

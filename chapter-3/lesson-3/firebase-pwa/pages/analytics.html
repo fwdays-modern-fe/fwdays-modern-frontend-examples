@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.4/css/bulma.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+    <link rel="stylesheet" href="../css/analytics.css">
+    <!-- Додамо маніфест -->
+    <link rel="manifest" href="../manifest.json">
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar is-light" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <div class="navbar-item">
+                <span class="icon-text">
+                    <span class="icon">
+                        <i class="fas fa-wallet"></i>
+                    </span>
+                    <span class="has-text-weight-bold">ExpenseTracker</span>
+                </span>
+            </div>
+
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasic">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+
+        <div id="navbarBasic" class="navbar-menu">
+            <div class="navbar-start">
+                <a class="navbar-item" href="../index.html">
+                    <span class="icon-text">
+                        <span class="icon">
+                            <i class="fas fa-home"></i>
+                        </span>
+                        <span>Dashboard</span>
+                    </span>
+                </a>
+                <a class="navbar-item is-active">
+                    <span class="icon-text">
+                        <span class="icon">
+                            <i class="fas fa-chart-pie"></i>
+                        </span>
+                        <span>Analytics</span>
+                    </span>
+                </a>
+            </div>
+
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <a class="navbar-item" href="profile.html">
+                        <span class="icon-text">
+                            <span class="icon">
+                                <i class="fas fa-user-circle"></i>
+                            </span>
+                            <span>Profile</span>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <section class="section">
+        <div class="container section-container">
+            <!-- Summary Tiles -->
+            <div class="columns is-mobile is-multiline is-centered">
+                <div class="column is-half-tablet is-one-third-desktop">
+                    <div class="box has-text-centered">
+                        <p class="heading">Spent This Month</p>
+                        <p class="title">$2,347</p>
+                    </div>
+                </div>
+                <div class="column is-half-tablet is-one-third-desktop">
+                    <div class="box has-text-centered">
+                        <p class="heading">Monthly Budget</p>
+                        <p class="title">$3,000</p>
+                    </div>
+                </div>
+                <div class="column is-half-tablet is-one-third-desktop">
+                    <div class="box has-text-centered">
+                        <p class="heading">Remaining Budget</p>
+                        <p class="title has-text-success">$653</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Spending Chart -->
+            <div class="block mt-4">
+                <h3 class="title is-4">Spending by Category</h3>
+                <div class="chart-container">
+                    <canvas id="spendingChart"></canvas>
+                </div>
+            </div>
+
+            <!-- Detailed Expenses -->
+            <div class="block mt-6" style="width: 100%; max-width: 800px;">
+                <div class="card">
+                    <header class="card-header">
+                        <p class="card-header-title is-centered">All Expenses</p>
+                    </header>
+                    <div class="card-content">
+                        <div class="expense-list">
+                            <table class="table is-fullwidth">
+                                <thead>
+                                    <tr>
+                                        <th>Category</th>
+                                        <th>Amount</th>
+                                        <th>Date</th>
+                                        <th>% of Budget</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="expenseTableBody">
+                                    <!-- Expenses will be populated here -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="../js/analytics.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,21 @@
+{
+    "name": "Expenses App",
+    "short_name": "ExpensesApp",
+    "start_url": "/index.html",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#ffffff",
+    "screenshots": [],
+    "id": "/index.html",
+    "scope": "/",
+    "shortcuts": [
+        {
+            "name": "Analytics",
+            "url": "/pages/analytics.html"
+        },
+        {
+            "name": "Profile",
+            "url": "/pages/profile.html"
+        }
+    ]
+}
