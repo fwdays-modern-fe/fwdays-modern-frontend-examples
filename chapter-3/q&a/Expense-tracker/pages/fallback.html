@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.4/css/bulma.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+    <title>Page Not Found - ExpenseTracker</title>
+    <style>
+        .error-section {
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .error-content {
+            text-align: center;
+            padding: 2rem;
+        }
+        .error-icon {
+            font-size: 5rem;
+            color: #dbdbdb;
+            margin-bottom: 1.5rem;
+        }
+        .back-button {
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar is-light" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <div class="navbar-item">
+                <span class="icon-text">
+                    <span class="icon">
+                        <i class="fas fa-wallet"></i>
+                    </span>
+                    <span class="has-text-weight-bold">ExpenseTracker</span>
+                </span>
+            </div>
+        </div>
+    </nav>
+
+    <section class="error-section">
+        <div class="error-content">
+            <div class="error-icon">
+                <i class="fas fa-exclamation-circle"></i>
+            </div>
+            <h1 class="title is-2">You're Offline</h1>
+            <h2 class="subtitle is-4">Please get back to us when your connection will be restored</h2>
+            <a href="/index.html" class="button is-primary is-medium back-button">
+                <span class="icon">
+                    <i class="fas fa-home"></i>
+                </span>
+                <span>Back to Home</span>
+            </a>
+        </div>
+    </section>
+
+    <script>
+        // Handle back button click
+        document.querySelector('.back-button').addEventListener('click', function(e) {
+            e.preventDefault();
+            window.location.href = '/index.html';
+        });
+    </script>
+</body>
+</html>

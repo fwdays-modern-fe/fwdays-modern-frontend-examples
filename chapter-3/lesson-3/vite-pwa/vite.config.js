@@ -17,6 +17,7 @@ export default defineConfig({
         includeAssets: ['assets/logo.png'],
         manifest,
         workbox: {
+            swDest: 'service-worker.js',
             runtimeCaching: [
                 {
                     urlPattern: /^https:\/\/cdnjs\.cloudflare\.com\/.*/i,
