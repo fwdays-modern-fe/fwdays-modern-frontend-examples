@@ -10,7 +10,7 @@ const CryptoPrices = () => {
     useEffect(() => {
         const fetchPrices = async () => {
             try {
-                const response = await fetch('https://2nueuachyk.eu-west-1.awsapprunner.com/crypto');
+                const response = await fetch('https://tdr539dbfe.us-east-1.awsapprunner.com/crypto');
                 if (!response.ok) {
                     throw new Error('Network response was not ok');
                 }
